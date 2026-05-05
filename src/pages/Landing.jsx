@@ -170,10 +170,10 @@ function Hero() {
           <motion.div
             variants={{ hidden: { opacity: 0, y: 14 }, show: { opacity: 1, y: 0 } }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-            className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-xs font-medium text-white backdrop-blur"
+            className="mb-5 inline-flex max-w-full items-center gap-2 truncate whitespace-nowrap rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-[11px] font-medium text-white backdrop-blur sm:text-xs"
           >
-            <Sparkles className="h-3.5 w-3.5" />
-            new — collaborative trip planning, made simple
+            <Sparkles className="h-3.5 w-3.5 shrink-0" />
+            <span className="truncate">new · collaborative trip planning, made simple</span>
           </motion.div>
 
           <motion.h1
