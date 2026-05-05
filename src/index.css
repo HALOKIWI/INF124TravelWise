@@ -83,6 +83,15 @@ input[type='number']::-webkit-inner-spin-button {
   -webkit-tap-highlight-color: transparent;
 }
 
+/* Hide scrollbar but preserve scrolling */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 /* Pill button */
 .btn {
   @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-all duration-200 no-tap-highlight focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-400/60;

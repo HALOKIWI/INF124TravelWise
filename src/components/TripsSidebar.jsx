@@ -30,7 +30,7 @@ export default function TripsSidebar() {
       </NavLink>
       <div className="my-1 h-px w-8 bg-white/10" />
 
-      <div className="flex flex-1 flex-col items-center gap-2 overflow-y-auto pb-2">
+      <div className="no-scrollbar flex w-full flex-1 flex-col items-center gap-2 overflow-y-auto overflow-x-hidden pb-2">
         {trips.map((t) => {
           const active = t.id === tripId
           return (
@@ -38,8 +38,8 @@ export default function TripsSidebar() {
               key={t.id}
               to={`/app/trips/${t.id}`}
               title={t.name}
-              className={`group relative grid h-11 w-11 place-items-center overflow-hidden rounded-2xl bg-gradient-to-br ${t.color} text-white shadow-card transition hover:rounded-xl ${
-                active ? 'ring-2 ring-white' : ''
+              className={`group relative grid h-11 w-11 shrink-0 place-items-center overflow-hidden rounded-2xl bg-gradient-to-br ${t.color} text-white shadow-card transition hover:rounded-xl ${
+                active ? 'ring-2 ring-inset ring-white' : ''
               }`}
             >
               {t.cover ? (
